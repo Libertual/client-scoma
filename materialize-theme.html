@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+  <html lang="es" ng-app="MyApp">
+    <head>
+      <title>Tecnual</title>
+      <!--Import Google Icon Font
+      <link href="stylesheets/font.css" rel="stylesheet">
+    -->
+      <!-- Compiled and minified CSS
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/css/materialize.min.css">
+      -->
+      <!--Import Google Icon Font-->
+<link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<!--Import materialize.css-->
+<link type="text/css" rel="stylesheet" href="vendor/materialize/css/materialize.min.css"  media="screen,projection"/>
+<!-- Pallete CSS Theme-->
+<link rel="stylesheet" href="stylesheets/palette.css">
+
+<!--Let browser know website is optimized for mobile-->
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    </head>
+
+    <body>
+<div class="navbar-fixed">
+    <nav ng-controller="NavbarCtrl">
+      <ul id="slide-out" class="side-nav">
+          <li><a href="#!">Tecnual</a></li>
+          <li ng-class="{active: isActive('/')}"><a href="/#/">Inicio</a></li>
+          <li ng-if="isAuthenticated()" ng-class="{active: isActive('/profile')}"><a href="/#/profile">Profile</a></li>
+          <ul ng-if="!isAuthenticated()">
+            <li ng-class="{active: isActive('/login')}"><a href="/#/login">Login</a></li>
+            <li ng-class="{active: isActive('/signup')}"><a href="/#/signup">Sign up</a></li>
+        </ul>
+          <ul ng-if="isAuthenticated()">
+            <li ><a href="/#/logout">Logout</a></li>
+          </ul>
+        </ul>
+
+        <ul class="left hide-on-med-and-down">
+          <li ng-class="{active: isActive('/')}"><a href="/#/">Inicio</a></li>
+          <li ng-if="isAuthenticated()" ng-class="{active: isActive('/profile')}"><a href="/#/profile">Profile</a></li>
+        </ul>
+        <ul ng-if="!isAuthenticated()" class="hide-on-med-and-down right">
+          <li ng-class="{active: isActive('/login')}"><a href="/#/login">Login</a></li>
+          <li ng-class="{active: isActive('/signup')}"><a href="/#/signup">Sign up</a></li>
+        </ul>
+        <ul ng-if="isAuthenticated()" class="hide-on-med-and-down right">
+          <li ><a href="/#/logout">Logout</a></li>
+        </ul>
+        <a href="#" data-activates="slide-out" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
+      </nav>
+</div>
+<div ui-view></div>
+  <footer class="page-footer">
+            <div class="container">
+              <div class="row">
+                <div class="col l6 s12">
+                  <h5 class="white-text">Footer Content</h5>
+                  <p class="grey-text text-lighten-4">You can use rows and columns here to organize your footer content.</p>
+                </div>
+                <div class="col l4 offset-l2 s12">
+                  <h5 class="white-text">Links</h5>
+                  <ul>
+                    <li><a class="grey-text text-lighten-3" href="#!">Link 1</a></li>
+                    <li><a class="grey-text text-lighten-3" href="#!">Link 2</a></li>
+                    <li><a class="grey-text text-lighten-3" href="#!">Link 3</a></li>
+                    <li><a class="grey-text text-lighten-3" href="#!">Link 4</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="footer-copyright">
+              <div class="container">
+              © 2014 Copyright Text
+              <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
+              </div>
+            </div>
+  </footer>
+      <!--Import jQuery before materialize.js-->
+      <script type="text/javascript" src="vendor/jquery-2.1.1.min.js"></script>
+      <!-- Compiled and minified JavaScript
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/js/materialize.min.js"></script>
+      -->
+      <script src="vendor/materialize/js/materialize.js"></script>
+
+      <!-- Third-party Libraries -->
+      <script src="/vendor/angular.js"></script>
+      <script src="/vendor/angular-animate.js"></script>
+      <script src="/vendor/angular-messages.js"></script>
+      <script src="/vendor/angular-resource.js"></script>
+      <script src="/vendor/angular-sanitize.js"></script>
+      <script src="/vendor/angular-ui-router.js"></script>
+      <script src="/vendor/angular-toastr.tpls.js"></script>
+      <script src="/vendor/satellizer.js"></script>
+
+
+
+      <!-- Application Code -->
+      <script src="/app.js"></script>
+      <script src="/directives/passwordStrength.js"></script>
+      <script src="/directives/passwordMatch.js"></script>
+      <script src="/controllers/home.js"></script>
+      <script src="/controllers/login.js"></script>
+      <script src="/controllers/signup.js"></script>
+      <script src="/controllers/logout.js"></script>
+      <script src="/controllers/profile.js"></script>
+      <script src="/controllers/navbar.js"></script>
+      <script src="/services/account.js"></script>
+
+
+
+      <script>
+      // Initialize collapsible (uncomment the line below if you use the dropdown variation)
+      //$('.collapsible').collapsible();
+      $('.button-collapse').sideNav({
+     menuWidth: 300, // Default is 240
+     edge: 'left', // Choose the horizontal origin
+     closeOnClick: true // Closes side-nav on <a> clicks, useful for Angular/Meteor
+        }
+      );
+      </script>
+    </body>
+  </html>

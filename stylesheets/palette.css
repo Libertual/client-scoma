@@ -8,3 +8,14 @@
 .primary-text-color    { color: #212121; }
 .secondary-text-color  { color: #727272; }
 .divider-color         { border-color: #B6B6B6; }
+
+footer.page-footer {
+background-color: #303F9F;
+// background: linear-gradient(to left, #3F51B5, #3F51B5, #3F51B5,cyan);
+}
+nav {
+  background-color: #303F9F;
+}
+.btn {
+  background-color: #3F51B5;
+}
