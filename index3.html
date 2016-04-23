@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
+  <title>Parallax Template - Materialize</title>
+
+  <!-- CSS  -->
+
+
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+
+</head>
+<body ng-app="MyApp" ng-cloak>
+
+  <div ng-controller="AppCtrl" ng-cloak>
+    <md-content class="md-padding" layout="row" layout-wrap layout-align="center start" layout-xs="column">
+      <div flex="50" flex-sm="100" flex-xs="100" layout="column">
+        <md-card>
+          <md-card-title>
+            <md-card-title-text>
+              <span class="md-headline">Card with image</span>
+              <span class="md-subhead">Large</span>
+            </md-card-title-text>
+            <md-card-title-media>
+              <div class="md-media-lg card-media"></div>
+            </md-card-title-media>
+          </md-card-title>
+          <md-card-actions layout="row" layout-align="end center">
+            <md-button>Action 1</md-button>
+            <md-button>Action 2</md-button>
+          </md-card-actions>
+        </md-card>
+        <md-card>
+          <md-card-title>
+            <md-card-title-text>
+              <span class="md-headline">Card with  image</span>
+              <span class="md-subhead">Extra Large</span>
+            </md-card-title-text>
+          </md-card-title>
+          <md-card-content layout="row" layout-align="space-between">
+            <div class="md-media-xl card-media"></div>
+            <md-card-actions layout="column">
+              <md-button class="md-icon-button" aria-label="Favorite">
+                <md-icon md-svg-icon="img/icons/favorite.svg"></md-icon>
+              </md-button>
+              <md-button class="md-icon-button" aria-label="Settings">
+                <md-icon md-svg-icon="img/icons/menu.svg"></md-icon>
+              </md-button>
+              <md-button class="md-icon-button" aria-label="Share">
+                <md-icon md-svg-icon="img/icons/share-arrow.svg"></md-icon>
+              </md-button>
+            </md-card-actions>
+          </md-card-content>
+        </md-card>
+      </div>
+      <div flex="50" flex-sm="100" flex-xs="100" layout="column">
+        <md-card>
+          <md-card-title>
+            <md-card-title-text>
+              <span class="md-headline">Card with image</span>
+              <span class="md-subhead">Small</span>
+            </md-card-title-text>
+            <md-card-title-media>
+              <div class="md-media-sm card-media"></div>
+            </md-card-title-media>
+          </md-card-title>
+          <md-card-actions layout="row" layout-align="end center">
+            <md-button>Action 1</md-button>
+            <md-button>Action 2</md-button>
+          </md-card-actions>
+        </md-card>
+        <md-card>
+          <md-card-title>
+            <md-card-title-text>
+              <span class="md-headline">Card with image</span>
+              <span class="md-subhead">Medium</span>
+            </md-card-title-text>
+            <md-card-title-media>
+              <div class="md-media-md card-media"></div>
+            </md-card-title-media>
+          </md-card-title>
+          <md-card-actions layout="row" layout-align="end center">
+            <md-button>Action 1</md-button>
+            <md-button>Action 2</md-button>
+          </md-card-actions>
+        </md-card>
+      </div>
+    </md-content>
+  </div>
+
+     <div class="contenedor" ui-view></div>
+
+
+  <!-- Third-party Libraries -->
+  <!--
+  <script src="/vendor/angular.js"></script>
+  <script src="/vendor/angular-animate.js"></script>
+  <script src="/vendor/angular-messages.js"></script>
+  <script src="/vendor/angular-resource.js"></script>
+  <script src="/vendor/angular-sanitize.js"></script>
+  <script src="/vendor/angular-ui-router.js"></script>
+  <script src="/vendor/angular-toastr.tpls.js"></script>
+
+  <!-- Angular Material requires Angular.js Libraries -->
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-animate.min.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-aria.min.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-messages.min.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-sanitize.min.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-ui-router.min.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-toastr.tpls.js"></script>
+
+  <!-- Angular Material Library -->
+  <script src="http://ajax.googleapis.com/ajax/libs/angular_material/1.0.0/angular-material.min.js"></script>
+  <script src="/vendor/satellizer.js"></script>
+
+  <!-- Angular Material Library -->
+  <script src="http://ajax.googleapis.com/ajax/libs/angular_material/1.0.0/angular-material.min.js"></script>
+
+  <!-- Application Code -->
+  <script src="/app.js"></script>
+  <script src="/directives/passwordStrength.js"></script>
+  <script src="/directives/passwordMatch.js"></script>
+  <script src="/controllers/home.js"></script>
+  <script src="/controllers/login.js"></script>
+  <script src="/controllers/signup.js"></script>
+  <script src="/controllers/logout.js"></script>
+  <script src="/controllers/profile.js"></script>
+  <script src="/controllers/navbar.js"></script>
+  <script src="/services/account.js"></script>
+
+  </body>
+</html>

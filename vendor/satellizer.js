@@ -22,7 +22,7 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' && module.ex
       withCredentials: false,
       tokenRoot: null,
       cordova: false,
-      baseUrl: 'http://api.scoma.local',
+      baseUrl: 'http://api.scoma.home',
       loginUrl: '/auth/login',
       signupUrl: '/auth/signup',
       unlinkUrl: '/auth/unlink/',

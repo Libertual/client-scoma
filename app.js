@@ -1,13 +1,16 @@
 'use strict'
 
 angular
-  .module('MyApp', ['ngResource', 'ngMessages', 'ngAnimate', 'toastr', 'ui.router', 'satellizer'])
+  .module('MyApp', ['ngResource', 'ngMessages', 'ngAnimate', 'toastr', 'ui.router', 'satellizer', 'ngMaterial'])
   .config(function($stateProvider, $urlRouterProvider, $authProvider) {
     $stateProvider
       .state('home', {
         url: '/',
-        controller: 'HomeCtrl',
-        templateUrl: 'partials/home.html'
+        controller: 'LoginCtrl',
+        templateUrl: 'partials/prueba.html',
+        resolve: {
+          loginRequired: loginRequired
+        }
       })
       .state('login', {
         url: '/login',
@@ -98,9 +101,9 @@ angular
       }
       return deferred.promise;
     }
-
     function loginRequired($q, $location, $auth) {
       var deferred = $q.defer();
+      console.log(JSON.stringify(deferred))
       if ($auth.isAuthenticated()) {
         deferred.resolve();
       } else {

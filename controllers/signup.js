@@ -1,6 +1,7 @@
 angular.module('MyApp')
   .controller('SignupCtrl', function($scope, $location, $auth, toastr) {
     $scope.signup = function() {
+      console.log('User: ' + $scope.user)
       $auth.signup($scope.user)
         .then(function(response) {
           $auth.setToken(response);
